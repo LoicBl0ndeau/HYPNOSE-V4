@@ -1,0 +1,704 @@
+body
+{
+  overflow-x: hidden;
+  margin: 104vh 0 0 0;
+  font-family: arial, sans-serif, serif;
+}
+
+body::before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -4vh;
+  right: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #e6e6fa;
+  z-index: -9;
+  background-position: 75% center;
+}
+
+@media only screen and (max-width: 1200px){
+  body::before
+  {
+    background-image: url(images/fond-lg.jpg);
+  }
+}
+
+@media only screen and (min-width: 1201px){
+  body::before
+  {
+    background-image: url(images/fond-xl.jpg);
+  }
+}
+
+a
+{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+header
+{
+  box-shadow: 0 0 20px rgba(0,0,0,.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 8vh;
+  padding: 10px 0 10px 0;
+  z-index: 9;
+  background-color: white;
+  font-size: 3vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo
+{
+  height: 7vh;
+  border-radius: 100%;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.4);
+}
+
+header > a
+{
+  margin: 0 0 0 2vw;
+  display: inline-flex;
+  align-items: center;
+}
+
+.name1
+{
+  padding-left: 5px;
+  color: #76767f;
+}
+
+.name2
+{
+  font-weight: bold;
+  color: #5aafc6;
+}
+
+#annonce
+{
+  padding: 15px;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #5aafc6;
+  color: white;
+  animation-name: annonce;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes annonce{
+  10%
+  {
+    transform: translateY(calc(8vh + 20px));
+  }
+
+  75%
+  {
+    color: white;
+    background-color: #5aafc6;
+    transform: translateY(calc(8vh + 20px));
+  }
+
+  100%
+  {
+    color: black;
+    background-color: white;
+    transform: translateY(calc(8vh + 20px));
+  }
+}
+
+#menuBurger
+{
+  width: 6vh;
+  height: 5vh;
+  margin: 0 2vw 0 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#menuBurger span
+{
+  display: block;
+  position: absolute;
+  height: calc(100% / 5);
+  width: 100%;
+  background-color: #5aafc6;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#menuBurger span:nth-child(1) {
+  top: 0;
+}
+
+#menuBurger span:nth-child(2),#menuBurger span:nth-child(3) {
+  top: 40%;
+}
+
+#menuBurger span:nth-child(4) {
+  top: 80%;
+}
+
+#menuBurger.open span:nth-child(1) {
+  top: 40%;
+  width: 0%;
+  left: 50%;
+}
+
+#menuBurger.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#menuBurger.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#menuBurger.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+nav
+{
+  position: fixed;
+  top: calc(8vh + 20px);
+  width: 100%;
+  bottom: 0;
+  left: 100%;
+  transition: transform 1s;
+  background-color: white;
+  z-index: 9;
+  font-size: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a
+{
+  transition: color 0.3s;
+}
+
+nav a:hover
+{
+  color: #5aafc6;
+}
+
+#fb, #doctolib
+{
+  height: 10vh;
+  animation-name: shake;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+#doctolib
+{
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+#intro
+{
+  position: absolute;
+  top: 0;
+  bottom: -4vh;
+  left: 0;
+  right: 0;
+  color: white;
+  background: linear-gradient(to top,rgba(0,0,0,.6) 30%,rgba(255,255,255,.1));
+}
+
+#intro p
+{
+  padding: 10px;
+  position: absolute;
+  bottom: 17%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#accroche
+{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#sous-intro
+{
+  font-size: 15px;
+  color: rgba(255,255,255,.7);
+}
+
+@keyframes shake{
+  2.5%
+  {
+    transform: rotate(-10deg) scale(1.01);
+  }
+
+  10%
+  {
+    transform: rotate(10deg) scale(1.03);
+  }
+
+  15%
+  {
+    transform: rotate(-10deg) scale(1.03);
+  }
+
+  20%
+  {
+    transform: rotate(10deg) scale(1.01);
+  }
+
+  22.5%
+  {
+    transform: rotate(0) scale(1);
+  }
+}
+
+.container_calendly
+{
+  text-align: center;
+}
+
+.calendly_button
+{
+  background-color: #3D7787;
+  border-radius: 10px;
+  font-size: 25px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+  padding: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  transition: background-color .3s;
+}
+
+.calendly_button:hover
+{
+  background-color: #203F47;
+}
+
+.calendly-inline-widget
+{
+  display: none;
+  position: fixed !important;
+  opacity: 0;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 99 !important;
+}
+
+section
+{
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  opacity: 0;
+}
+
+section h2
+{
+  color: #1e1e22;
+  text-align: center;
+}
+
+hr
+{
+  background-color: grey;
+  width: 100%;
+}
+
+.texte
+{
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: justify;
+}
+
+.lien
+{
+  font-weight: bold;
+	text-decoration: underline;
+  color: #5aafc6;
+  cursor: pointer;
+}
+
+#annonce_teleconsultation
+{
+  display: block;
+  text-align: center;
+}
+
+#teleconsultation
+{
+  z-index: 99;
+  background-color: rgba(255,255,255,.97);
+  box-shadow: 0 0 max(100vw,100vh) black;
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  right: 5vw;
+  bottom: 5vh;
+  padding: 15px;
+  display: none;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: justify;
+  overflow: auto;
+  opacity: 0;
+}
+
+.croix_calendly
+{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.croix
+{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+#firstLine
+{
+  text-align: left;
+  max-width: 75%;
+}
+
+.gras
+{
+  font-weight: bold;
+}
+
+.container_sign_prix, .container_sign_hypnose
+{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: #3d464d;
+}
+
+.container_sign_hypnose .sign
+{
+  flex-grow: 1;
+}
+
+.sign
+{
+  display: flex;
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px;
+  background: linear-gradient(to top, #eaeaec, #f6f6f7, white);
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 30%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  cursor: pointer;
+  color: #3d464d;
+  transition: 1s;
+}
+
+.sign:hover
+{
+  background: linear-gradient(50deg, #eaeaec, #f6f6f7, white);
+}
+
+.sign svg
+{
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+#tarifs
+{
+  background: linear-gradient(to bottom,white 3%,20%,#5aafc6 40%);
+  color: white;
+}
+
+.sign_prix
+{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 15px;
+  padding: min(5vw,5vh);
+  margin-left: 10vw;
+  box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+  margin-right: 10vw;
+  background-color: white;
+  width: 80vw;
+}
+
+#combine
+{
+  margin-bottom: 0;
+}
+
+.container_prix
+{
+  text-align: center;
+  transition: transform 1s;
+}
+
+.prix
+{
+  font-size: 47px;
+  font-weight: bold;
+}
+
+.prix_description
+{
+  font-size: 11px;
+}
+
+.description_offre
+{
+  text-align: justify;
+}
+
+.reveal
+{
+  animation-name: revealing;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes revealing {
+  0%
+  {
+    transform: translateY(5vh);
+  }
+
+  50%
+  {
+    opacity: 1;
+  }
+
+  100%
+  {
+    opacity: 1;
+  }
+}
+
+.petit
+{
+  font-style: italic;
+  font-size: 75%;
+}
+
+.blue
+{
+  color: #5aafc6;
+}
+
+#container_contact
+{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container_logo
+{
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+}
+
+.container_logo a
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_logo figcaption
+{
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+figcaption
+{
+  text-align: center;
+}
+
+.logo_contact
+{
+  animation-name: shake;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1.25s;
+  width: 100px;
+}
+
+#horaires
+{
+  font-size: 130%;
+  text-align: center;
+}
+
+#horaires span
+{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#map
+{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 70vh;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  margin-top: 25px;
+}
+
+#container_infowindow
+{
+  display: inline-flex;
+  align-items: center;
+}
+
+#container_infowindow > img
+{
+  height: 20vw;
+  max-height: 100px;
+}
+
+#container_infowindow figure
+{
+  margin: 0 0 0 10px;
+  text-align: center;
+}
+
+#container_infowindow figure img
+{
+  height: 17vw;
+  max-height: 60px;
+}
+
+#container_infowindow figure figcaption
+{
+  font-size: min(3vw,100%);
+}
+
+@media only screen and (min-width: 1201px) and (orientation: landscape) /*Css laptop*/
+{
+  #menuBurger
+  {
+    display: none;
+  }
+
+  nav
+  {
+    position: static;
+    width: 60vw;
+    font-size: 2.4vh;
+    flex-direction: row;
+  }
+
+  #fb, #doctolib
+  {
+    height: 7vh;
+  }
+
+  #intro p
+  {
+    padding: 10px 27vw 10px 27vw;
+  }
+
+  #accroche
+  {
+    font-weight: bold;
+    font-size: 4vh;
+  }
+
+  #sous-intro
+  {
+    font-size: 2vh;
+    color: rgba(255,255,255,.7);
+  }
+
+  .texte
+  {
+    margin-left: 30vw;
+    margin-right: 30vw;
+    text-align: center;
+  }
+
+  .container_sign_hypnose
+  {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+
+  .sign_prix
+  {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc((100% - 120px - min(30vh,30vw)) / 3);
+  }
+}

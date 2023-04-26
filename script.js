@@ -84,21 +84,21 @@ function menu(){
 function initMap(){
 	map = new google.maps.Map(document.getElementById('map'),
 	{
-		center: {lat: 50.517300, lng: 3.0158500},
+		center: {lat: 50.5522955, lng: 3.0293425},
 		zoom: 17,
 		mapTypeId: google.maps.MapTypeId.HYBRID,
 	});
 	marker = new google.maps.Marker
 	({
-		position: {lat: 50.517300, lng: 3.0158500},
+		position: {lat: 50.5522955, lng: 3.0293425},
 		map: map,
 		animation: google.maps.Animation.DROP,
 		title: "Phalempin",
 	});
 	infowindow = new google.maps.InfoWindow({
     content: '<div id="container_infowindow">'+
-						   '<img src="images/cabinet-phalempin.jpg" alt="Cabinet Phalempin" />'+
-						   '<figure><a href="https://goo.gl/maps/eqkvEYV8zdz" target="_blank"><img src="images/itineraire.png" alt="ITINERAIRE" /><figcaption class="lien">ITINÉRAIRE</figcaption></a></figure>'+
+						   '<img src="images/cabinet-seclin.jpg" alt="Cabinet Seclin" />'+
+						   '<figure><a href="https://goo.gl/maps/eV3MtofddB3ofq1s8" target="_blank"><img src="images/itineraire.png" alt="ITINERAIRE" /><figcaption class="lien">ITINÉRAIRE</figcaption></a></figure>'+
 						 '</div>',
   });
 	marker.addListener('click',function(){

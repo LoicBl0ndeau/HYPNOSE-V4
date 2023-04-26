@@ -326,6 +326,7 @@ nav a:hover
   display: none;
   position: fixed !important;
   opacity: 0;
+  background-color: white;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;

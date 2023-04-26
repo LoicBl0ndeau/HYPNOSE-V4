@@ -1,11 +1,16 @@
 body
 {
   overflow-x: hidden;
-  margin: 104vh 0 0 0;
   font-family: arial, sans-serif, serif;
+  margin: 0;
 }
 
-body::before
+#top
+{
+  margin: 104vh 0 0 0;
+}
+
+#top::before
 {
   content: "";
   position: absolute;
@@ -21,14 +26,14 @@ body::before
 }
 
 @media only screen and (max-width: 1200px){
-  body::before
+  #top::before
   {
     background-image: url(images/fond-lg.jpg);
   }
 }
 
 @media only screen and (min-width: 1201px){
-  body::before
+  #top::before
   {
     background-image: url(images/fond-xl.jpg);
   }
@@ -57,7 +62,7 @@ header
   justify-content: space-between;
 }
 
-#logo
+.logo
 {
   height: 7vh;
   border-radius: 100%;
@@ -646,6 +651,65 @@ figcaption
   font-size: min(3vw,100%);
 }
 
+footer
+{
+  border-top: 10px solid #5aafc6;
+  text-align: center;
+  background-color: #f6f6f7;
+  margin-bottom: 20px;
+}
+
+footer table
+{
+  padding: 30px 10px 30px 10px;
+  width: 100%;
+}
+
+footer table tr
+{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+footer table tr td
+{
+  margin: 13px;
+}
+
+.logo_footer
+{
+  display: flex;
+  align-items: center;
+}
+
+.container_logo_footer
+{
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo_footer .name1, .logo_footer .name2
+{
+  font-size: 28px;
+}
+
+.titre_footer
+{
+  font-weight: bold;
+}
+
+.lien_footer a
+{
+  transition: color 0.3s;
+}
+
+.lien_footer a:hover
+{
+  color: #5aafc6;
+}
+
 @media only screen and (min-width: 1201px) and (orientation: landscape) /*Css laptop*/
 {
   #menuBurger
@@ -701,5 +765,19 @@ figcaption
     margin-left: 20px;
     margin-right: 20px;
     width: calc((100% - 120px - min(30vh,30vw)) / 3);
+  }
+  
+  footer table tr
+  {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .container_logo_footer
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
   }
 }

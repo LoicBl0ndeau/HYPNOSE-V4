@@ -23,20 +23,7 @@ body
   background-color: #e6e6fa;
   z-index: -9;
   background-position: 75% center;
-}
-
-@media only screen and (max-width: 1200px){
-  #top::before
-  {
-    background-image: url(images/fond-lg.jpg);
-  }
-}
-
-@media only screen and (min-width: 1201px){
-  #top::before
-  {
-    background-image: url(images/fond-xl.jpg);
-  }
+  background-image: url(images/fond.jpg);
 }
 
 a
@@ -709,6 +696,16 @@ footer table tr td
 .lien_footer a:hover
 {
   color: #5aafc6;
+}
+
+.lien_lagrenet
+{
+  transition: color 0.3s;
+}
+
+.lien_lagrenet:hover
+{
+  color: #FF4141;
 }
 
 @media only screen and (min-width: 1201px) and (orientation: landscape) /*Css laptop*/

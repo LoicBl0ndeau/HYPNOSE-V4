@@ -1,7 +1,6 @@
 var map, marker, infowindow;
 var infowindowOpen = 0;
 $(document).ready(function(){
-  initMap();
   $(window).on("scroll",scrolled);
   scrolled();
   $('#menuBurger,nav a,a[href="#top"]').on("click",menu);

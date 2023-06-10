@@ -290,9 +290,15 @@ nav a:hover
   }
 }
 
-.container_calendly
+.container_calendly_button
 {
   text-align: center;
+}
+
+.container_container_calendly_button
+{
+  display: inline-block;
+  text-align: left;
 }
 
 .calendly_button

@@ -290,6 +290,38 @@ nav a:hover
   }
 }
 
+.calendly_button_landingpage
+{
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 9px;
+  opacity: .9;
+  letter-spacing: -1px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.calendly_button_landingpage:hover
+{
+  opacity: 1;
+  background-color: #3D7787;
+  border: 0;
+  padding: 12px;
+}
+
+.calendly_button_landingpage::after
+{
+  content: "Nouveau!";
+  position: absolute;
+  border-radius: 5px;
+  transform: translateY(-16px);
+  background: rgb(255, 210, 77);
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .container_calendly_button
 {
   text-align: center;
@@ -303,6 +335,7 @@ nav a:hover
 
 .calendly_button
 {
+  letter-spacing: -1px;
   background-color: #3D7787;
   border-radius: 10px;
   font-size: 25px;
